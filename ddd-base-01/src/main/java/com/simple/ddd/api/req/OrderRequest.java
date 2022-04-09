@@ -21,6 +21,12 @@ public class OrderRequest {
 
     public static OrderForm req2form(OrderRequest request){
         OrderForm form = new OrderForm();
+        form.setOrderNo(request.getOrderNo());
+        form.setPriceStart(request.getPriceStart());
+        form.setPriceEnd(request.getPriceEnd());
+        form.setOrderTimeStart(request.getOrderTimeStart());
+        form.setOrderTimeEnd(request.getOrderTimeEnd());
+        return form;
     }
 
 }

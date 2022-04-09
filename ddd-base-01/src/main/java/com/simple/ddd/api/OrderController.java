@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * 项目: DDD-projects
  * <p>
@@ -26,7 +28,7 @@ public class OrderController {
     private OrderManage orderManage;
 
     @PostMapping("/listOrderDetails")
-    public SimpleResponse<OrderDTO> listOrderDetails(@RequestBody OrderRequest request) {
-        return new SimpleResponse<OrderDTO>(orderManage.listOrderDetails(request));
+    public SimpleResponse<List<OrderDTO>> listOrderDetails(@RequestBody OrderRequest request) {
+        return new SimpleResponse<>(orderManage.listOrderDetails(request));
     }
 }

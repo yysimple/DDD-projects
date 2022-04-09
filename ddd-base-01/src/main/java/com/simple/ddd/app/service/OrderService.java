@@ -2,6 +2,7 @@ package com.simple.ddd.app.service;
 
 
 import com.simple.ddd.domain.oder.model.aggregates.OrderRichInfo;
+import com.simple.ddd.domain.oder.model.form.OrderForm;
 
 import java.util.List;
 
@@ -15,5 +16,5 @@ import java.util.List;
  **/
 public interface OrderService {
 
-    List<OrderRichInfo> listOrder();
+    List<OrderRichInfo> listOrder(OrderForm form);
 }

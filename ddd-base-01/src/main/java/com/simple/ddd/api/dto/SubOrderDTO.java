@@ -1,4 +1,4 @@
-package com.simple.ddd.domain.oder.model.sub;
+package com.simple.ddd.api.dto;
 
 import lombok.Data;
 
@@ -10,12 +10,16 @@ import java.math.BigDecimal;
  * 功能描述:
  *
  * @author: WuChengXing
- * @create: 2022-04-09 17:45
+ * @create: 2022-04-09 19:38
  **/
 @Data
-public class SubOrderInfo {
+public class SubOrderDTO {
     private String orderNo;
     private String subOrderNo;
     private String skuNo;
     private BigDecimal price;
+    private String productNo;
+    private String productName;
+    private String productDesc;
+    private String type;
 }

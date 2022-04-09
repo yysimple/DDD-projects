@@ -1,8 +1,9 @@
 package com.simple.ddd.api.dto;
 
-import com.simple.ddd.domain.oder.model.aggregates.OrderRichInfo;
-import com.simple.ddd.domain.product.model.aggregates.ProductRichInfo;
+import com.simple.ddd.domain.oder.model.vo.OrderInfo;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * 项目: DDD-projects
@@ -14,6 +15,6 @@ import lombok.Data;
  **/
 @Data
 public class OrderDTO {
-    private OrderRichInfo orderRichInfo;
-    private ProductRichInfo productRichInfo;
+    private OrderInfo orderInfo;
+    private List<SubOrderDTO> subOrderDTOS;
 }
